@@ -1,0 +1,18 @@
+{
+    "name": "shorts-hub",
+    "version": "2.0.0",
+    "description": "منصة إدارة السحب السحابي للفيديوهات",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "deploy": "gh-pages -d ."
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.5",
+      "express": "^4.19.2"
+    },
+    "devDependencies": {
+      "gh-pages": "^6.1.1"
+    }
+  }

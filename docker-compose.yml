@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  database:
+    image: mongo:latest
+    container_name: shorts_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  downloader:
+    build: ./downloader-service
+    container_name: shorts_downloader
+    ports:
+      - "5001:5001"
+
+  backend:
+    build: ./backend
+    container_name: shorts_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://database:27017/shorts_hub
+      - JWT_SECRET=super_secret_jwt_key_here
+      - DOWNLOADER_SERVICE_URL=http://downloader:5001/download
+    depends_on:
+      - database
+      - downloader
+
+volumes:
+  mongo_data:
