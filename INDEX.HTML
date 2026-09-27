@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorts Hub - منصة إدارة الشورتس السحابية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'Cairo', sans-serif; background-color: #0b0f19; color: #f3f4f6; }
+        .glass { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- شاشة المصادقة -->
+    <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="glass p-6 sm:p-8 rounded-2xl w-full max-w-md shadow-2xl">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-black gradient-text">Shorts Hub</h1>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1">منصة السحب السحابي الذكي للفيديوهات</p>
+            </div>
+            
+            <form onsubmit="handleAuth(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">البريد الإلكتروني</label>
+                    <input type="email" id="authEmail" value="admin@shorts.hub" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">كلمة المرور</label>
+                    <input type="password" id="authPassword" value="123456" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500">
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-pink-600 rounded-xl font-bold text-white shadow-lg hover:opacity-90 transition">دخول سريع للمنصة</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- التطبيق الرئيسي -->
+    <div id="appContainer" class="hidden flex-1 flex flex-col">
+        <header class="glass border-b border-gray-800 sticky top-0 z-40 px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <h2 class="text-xl sm:text-2xl font-black gradient-text">Shorts Hub</h2>
+                <button onclick="openPricingModal()" class="text-[10px] sm:text-xs px-3 py-1 bg-gradient-to-r from-amber-500 to-pink-500 text-white rounded-full font-bold shadow hover:opacity-90 transition">ترقية الباقة ⚡</button>
+            </div>
+            <button onclick="logout()" class="p-2 text-gray-400 hover:text-red-400 transition" title="تسجيل الخروج"><i class="fa-solid fa-right-from-bracket text-lg"></i></button>
+        </header>
+
+        <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="glass p-5 sm:p-6 rounded-2xl flex flex-col space-y-4 h-fit">
+                <h3 class="text-base sm:text-lg font-bold flex items-center gap-2"><i class="fa-solid fa-cloud-arrow-down text-indigo-400"></i> سحب فيديو جديد</h3>
+                <form onsubmit="downloadVideo(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">رابط الفيديو (تيك توك، إنستجرام، يوتيوب)</label>
+                        <input type="url" id="videoUrl" placeholder="https://www.tiktok.com/@..." required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <button type="submit" id="downloadBtn" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold text-white shadow transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> جلب وتحميل فوري
+                    </button>
+                </form>
+            </div>
+
+            <div class="lg:col-span-2 glass p-5 sm:p-6 rounded-2xl flex flex-col">
+                <h3 class="text-base sm:text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-video text-pink-400"></i> مكتبة الشورتس المسحوبة</h3>
+                <div id="videosGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="text-center py-12 text-gray-500 col-span-full">لا توجد فيديوهات مسحوبة حتى الآن. أضف رابطك الأول!</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- نافذة الاشتراكات ووسائل الدفع -->
+    <div id="pricingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/85 backdrop-blur-md p-4">
+        <div class="glass p-6 sm:p-8 rounded-2xl w-full max-w-2xl shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closePricingModal()" class="absolute top-4 left-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black gradient-text">اختر باقتك المفضلة</h2>
+                <p class="text-xs text-gray-400 mt-1">احصل على صلاحيات غير محدودة وسحب سريع للفيديوهات</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-900/80 border border-indigo-500/30 p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-bold text-lg text-indigo-400 mb-1">الباقة الاحترافية</h4>
+                        <p class="text-2xl font-black mb-3">$9.99 <span class="text-xs text-gray-400 font-normal">/ شهرياً</span></p>
+                        <ul class="text-xs text-gray-300 space-y-2 mb-4">
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> سحب غير محدود للفيديوهات</li>
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> بدون حقوق ملكية</li>
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> دعم فني أولوي</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPlan('الباقة الاحترافية', '$9.99')" class="w-y py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
+                </div>
+
+                <div class="bg-gray-900/80 border border-pink-500/30 p-5 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-bold text-lg text-pink-400 mb-1">باقة الشركات</h4>
+                        <p class="text-2xl font-black mb-3">$29.99 <span class="text-xs text-gray-400 font-normal">/ شهرياً</span></p>
+                        <ul class="text-xs text-gray-300 space-y-2 mb-4">
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> كل مميزات الباقة الاحترافية</li>
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> ربط API خاص</li>
+                            <li><i class="fa-solid fa-check text-green-400 ml-1"></i> مدير حساب خاص</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPlan('باقة الشركات', '$29.99')" class="w-y py-2.5 bg-pink-600 hover:bg-pink-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
+                </div>
+            </div>
+
+            <div id="paymentSection" class="hidden border-t border-gray-800 pt-4">
+                <h4 class="font-bold text-sm mb-3 text-gray-200">اختر وسيلة الدفع المتاحة:</h4>
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                    <button onclick="payWith('بطاقة ائتمان (Visa/Mastercard)')" class="p-3 bg-gray-900 border border-gray-700 hover:border-indigo-500 rounded-xl text-center text-xs font-bold transition flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-credit-card text-lg text-indigo-400"></i> بطاقة ائتمان
+                    </button>
+                    <button onclick="payWith('محفظة إلكترونية (PayPal)')" class="p-3 bg-gray-900 border border-gray-700 hover:border-indigo-500 rounded-xl text-center text-xs font-bold transition flex flex-col items-center gap-1">
+                        <i class="fa-brands fa-paypal text-lg text-blue-400"></i> باي بال
+                    </button>
+                    <button onclick="payWith('محفظة محلية / فودافون كاش')" class="p-3 bg-gray-900 border border-gray-700 hover:border-indigo-500 rounded-xl text-center text-xs font-bold transition flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-wallet text-lg text-pink-400"></i> محفظة محلية
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000/api';
+        let authToken = localStorage.getItem('token') || '';
+
+        if (authToken) {
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('appContainer').classList.remove('hidden');
+        }
+
+        async function handleAuth(event) {
+            event.preventDefault();
+            localStorage.setItem('token', 'mock_token');
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('appContainer').classList.remove('hidden');
+        }
+
+        function openPricingModal() { document.getElementById('pricingModal').classList.remove('hidden'); }
+        function closePricingModal() { document.getElementById('pricingModal').classList.add('hidden'); }
+
+        function selectPlan(name, price) {
+            document.getElementById('paymentSection').classList.remove('hidden');
+        }
+
+        function payWith(method) {
+            alert(`تم اختيار وسيلة الدفع (${method}) بنجاح! سيتم توجيهك لبوابة الدفع الآمنة.`);
+            closePricingModal();
+        }
+
+        async function downloadVideo(event) {
+            event.preventDefault();
+            const urlInput = document.getElementById('videoUrl');
+            const url = urlInput.value.trim();
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            downloadBtn.disabled = true;
+            downloadBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> جاري السحب...';
+
+            setTimeout(() => {
+                const grid = document.getElementById('videosGrid');
+                if (grid.innerHTML.includes('لا توجد فيديوهات')) grid.innerHTML = '';
+                
+                grid.innerHTML = `
+                    <div class="glass p-4 rounded-xl border border-gray-800 flex flex-col justify-between">
+                        <div class="aspect-[9/16] bg-black rounded-lg mb-3 overflow-hidden relative flex flex-col items-center justify-center p-4 text-center">
+                            <i class="fa-solid fa-circle-play text-4xl text-indigo-500 mb-2"></i>
+                            <p class="text-xs text-gray-300 mb-3 truncate w-full">${url}</p>
+                            <a href="${url}" target="_blank" class="px-3 py-1.5 bg-indigo-600 text-white text-xs font-bold rounded-lg hover:bg-indigo-500 transition">مشاهدة مباشرة ↗</a>
+                        </div>
+                        <p class="text-xs font-bold text-gray-200 truncate mb-2">${url}</p>
+                        <a href="${url}" target="_blank" class="text-center py-1.5 bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-400 text-xs font-bold rounded-lg transition">فتح الرابط الأصلي</a>
+                    </div>
+                ` + grid.innerHTML;
+                
+                urlInput.value = '';
+                downloadBtn.disabled, downloadBtn.disabled = false;
+                downloadBtn.innerHTML = '<i class="fa-solid fa-download"></i> جلب وتحميل فوري';
+            }, 500);
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

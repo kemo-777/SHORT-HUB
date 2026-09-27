@@ -1,0 +1,901 @@
+{
+  "users": [
+    {
+      "id": "usr_52a824ea-afc1-4332-a683-0291f0d243de",
+      "name": "OMNI Administrator",
+      "email": "admin@omni.local",
+      "passwordHash": "$2b$12$cQsM83oeOxhIE9OfDGeuUesJGHh4kTKPClWaLD/xG676PYVngU5Ky",
+      "role": "admin",
+      "createdAt": "2026-09-27T17:15:56.930Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_8175e9a7-9f29-4da7-86fe-9b7f10a7b3cb",
+      "name": "Steam Wallet",
+      "category": "games",
+      "price": 100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "wallet",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.634Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_5af69163-a32c-4fe7-8341-07d5147c0956",
+      "name": "Steam Wallet",
+      "category": "games",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "wallet",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.635Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_5b88b700-20c9-4274-902c-1e72f4872945",
+      "name": "Steam Wallet",
+      "category": "games",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "wallet",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.635Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_855f88cf-7bf7-4be0-9ef3-2f8164260840",
+      "name": "PlayStation Store Credit",
+      "category": "games",
+      "price": 100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.635Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_7122ce93-1e01-42d1-be8e-c12f5b1fb8b5",
+      "name": "PlayStation Store Credit",
+      "category": "games",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.635Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_6fcf5fd0-05f8-451a-83c6-e878d33f3221",
+      "name": "PlayStation Store Credit",
+      "category": "games",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.635Z",
+      "updatedAt": "2026-09-27T17:15:56.635Z"
+    },
+    {
+      "id": "prd_3ff77f3f-d8fd-416a-b965-3faede1dd26f",
+      "name": "Xbox Gift Card",
+      "category": "games",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_aeee2610-437b-4526-8c79-6f1f9509e727",
+      "name": "Xbox Gift Card",
+      "category": "games",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_c38a70ba-b18d-403e-a140-63f921a8c819",
+      "name": "Minecraft",
+      "category": "games",
+      "price": 750,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_28264fda-37de-4121-8fe4-00c3c234c7b1",
+      "name": "Discord Nitro",
+      "category": "games",
+      "price": 300,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_01dd9cd1-c96c-4538-b09c-c9155c5d718b",
+      "name": "Discord Nitro",
+      "category": "games",
+      "price": 600,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_a2ee28c8-3d2f-4b41-bdbb-e56b0e907c22",
+      "name": "Game Pass",
+      "category": "games",
+      "price": 450,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_a5476f2b-2a13-404b-94a3-203d8a016a7c",
+      "name": "Game Pass Ultimate",
+      "category": "games",
+      "price": 850,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_6f607eaf-d0b2-429b-813d-9ac097d0d3fa",
+      "name": "Roblox Credit",
+      "category": "game-currency",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_efac03f3-f2e4-4ef4-a55a-f00a8f9886ed",
+      "name": "Roblox Credit",
+      "category": "game-currency",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_cb7f241c-b1e0-411f-8f1a-42d0736fd1a6",
+      "name": "PUBG Mobile UC",
+      "category": "game-currency",
+      "price": 100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_4566db8d-d7f9-4bac-8464-3957f381bbd3",
+      "name": "PUBG Mobile UC",
+      "category": "game-currency",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_59438c0e-e3d4-4d89-b035-75cb72d39ec7",
+      "name": "PUBG Mobile UC",
+      "category": "game-currency",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_4836f363-2be7-401d-a88e-9145701ac6cb",
+      "name": "Free Fire Diamonds",
+      "category": "game-currency",
+      "price": 100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_7fac58eb-d7ca-444c-92c1-4a10dfeefa66",
+      "name": "Free Fire Diamonds",
+      "category": "game-currency",
+      "price": 250,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_d4dfd086-af00-4f44-a1d6-e0b73df81881",
+      "name": "Free Fire Diamonds",
+      "category": "game-currency",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.636Z",
+      "updatedAt": "2026-09-27T17:15:56.636Z"
+    },
+    {
+      "id": "prd_64852ff3-5c64-4fee-a6b0-df3e053c27a3",
+      "name": "Microsoft 365",
+      "category": "software",
+      "price": 1200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_58162293-b40f-44a0-a541-61d9e79892ba",
+      "name": "Windows License",
+      "category": "software",
+      "price": 900,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_18c75ae4-409c-4ca0-bf16-6f32c08078ea",
+      "name": "Office License",
+      "category": "software",
+      "price": 750,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_f489cfde-dee4-48a0-93dc-84e3c5089587",
+      "name": "Adobe Creative Suite",
+      "category": "software",
+      "price": 1800,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_9cbecab4-bcb6-4a80-ba54-6c3b8a14766d",
+      "name": "Canva Pro",
+      "category": "design",
+      "price": 700,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_6b5c5e43-5de6-48d8-8adb-3115aa858103",
+      "name": "ChatGPT Plus",
+      "category": "ai",
+      "price": 1100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_7c6d9d12-44c6-458a-b3a8-f34036436d15",
+      "name": "AI Research Pack",
+      "category": "ai",
+      "price": 900,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_7def5b2d-1bff-4c1c-9414-ffa7839754bc",
+      "name": "AI Coding Pack",
+      "category": "ai",
+      "price": 1200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_403c64ba-1538-4e05-8355-965e2a594e3a",
+      "name": "AI Creator Pack",
+      "category": "ai",
+      "price": 1000,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_8c7e91a6-d1b8-4bed-afb4-fe4c6a754b20",
+      "name": "Cloud Storage 2TB",
+      "category": "cloud",
+      "price": 600,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_4628409d-baf9-4c9c-8fb7-a7da48fe4390",
+      "name": "Cloud Storage 5TB",
+      "category": "cloud",
+      "price": 1100,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_46baeaf5-2001-4078-8811-fd3024ff23d6",
+      "name": "Cloud Server Basic",
+      "category": "cloud",
+      "price": 750,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_c09fda26-6c07-4968-a044-893d1de24689",
+      "name": "Cloud Server Pro",
+      "category": "cloud",
+      "price": 1500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_e2095111-12df-46c7-9454-d20c53d1933f",
+      "name": "Programming Master Pack",
+      "category": "education",
+      "price": 800,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_1b2437e9-72c6-476d-8874-cf9f03bd5f80",
+      "name": "English Learning Pack",
+      "category": "education",
+      "price": 600,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_cf8cd6f4-79e0-4ac4-a671-ba725b9b597a",
+      "name": "Cybersecurity Learning Pack",
+      "category": "education",
+      "price": 900,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_9c1b90df-7384-4bdb-9608-ede35de56ec2",
+      "name": "AI Learning Pack",
+      "category": "education",
+      "price": 850,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_5722b9fd-1cce-47e8-850d-6714f7dc9db9",
+      "name": "Cybersecurity Lab Pack",
+      "category": "security",
+      "price": 1000,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_cb8105ea-53bf-467c-a573-3460c9b6d117",
+      "name": "Developer Pro Pack",
+      "category": "developer",
+      "price": 1200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_f08af1d6-943f-4b63-9900-8d09c2386108",
+      "name": "Git Tools Pack",
+      "category": "developer",
+      "price": 500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_ef15194d-1080-4dd9-a57a-52e9d074e359",
+      "name": "Video Creator Pack",
+      "category": "video",
+      "price": 1000,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_721cf411-b6e0-4ed2-87b8-2d22f24b7e65",
+      "name": "Music Creator Pack",
+      "category": "music",
+      "price": 900,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_3455691a-52e1-4acb-9b41-d31c3cbb97d3",
+      "name": "Productivity Pro Pack",
+      "category": "productivity",
+      "price": 700,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    },
+    {
+      "id": "prd_0015124d-723a-4b94-9914-9af1c68cc718",
+      "name": "Digital Business Pack",
+      "category": "digital-services",
+      "price": 1200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "targetType": "account",
+      "requiresTargetId": true,
+      "fulfillment": {
+        "provider": null,
+        "providerStatus": "not_connected",
+        "automatic": false
+      },
+      "active": true,
+      "createdAt": "2026-09-27T17:15:56.637Z",
+      "updatedAt": "2026-09-27T17:15:56.637Z"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "bnd_b636d57a-bda5-4bdd-b98d-75c890366121",
+      "name": "OMNI Student Bundle",
+      "description": "Education + productivity + AI tools.",
+      "price": 2200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "productIds": [
+        "prd_e2095111-12df-46c7-9454-d20c53d1933f",
+        "prd_1b2437e9-72c6-476d-8874-cf9f03bd5f80",
+        "prd_9c1b90df-7384-4bdb-9608-ede35de56ec2"
+      ],
+      "active": true
+    },
+    {
+      "id": "bnd_28a16176-4230-47d8-9716-bde780abe183",
+      "name": "OMNI Developer Bundle",
+      "description": "Developer + AI + cloud tools.",
+      "price": 3200,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "productIds": [
+        "prd_7def5b2d-1bff-4c1c-9414-ffa7839754bc",
+        "prd_46baeaf5-2001-4078-8811-fd3024ff23d6",
+        "prd_cb8105ea-53bf-467c-a573-3460c9b6d117"
+      ],
+      "active": true
+    },
+    {
+      "id": "bnd_d4244d02-93ef-4039-ab9c-b2edac834b7b",
+      "name": "OMNI Gamer Bundle",
+      "description": "Gaming products and digital credits.",
+      "price": 2500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "productIds": [
+        "prd_8175e9a7-9f29-4da7-86fe-9b7f10a7b3cb",
+        "prd_5af69163-a32c-4fe7-8341-07d5147c0956",
+        "prd_5b88b700-20c9-4274-902c-1e72f4872945"
+      ],
+      "active": true
+    },
+    {
+      "id": "bnd_7a642b94-b534-43ef-9c3f-18417da8ca72",
+      "name": "OMNI Creator Bundle",
+      "description": "AI + design + video + music.",
+      "price": 3000,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "productIds": [
+        "prd_9cbecab4-bcb6-4a80-ba54-6c3b8a14766d",
+        "prd_403c64ba-1538-4e05-8355-965e2a594e3a",
+        "prd_ef15194d-1080-4dd9-a57a-52e9d074e359",
+        "prd_721cf411-b6e0-4ed2-87b8-2d22f24b7e65"
+      ],
+      "active": true
+    },
+    {
+      "id": "bnd_c3b896f2-e19f-4095-a3c6-77b15b08fc89",
+      "name": "OMNI AI Power Bundle",
+      "description": "AI-focused digital toolkit.",
+      "price": 3500,
+      "currency": "EGP",
+      "priceStatus": "catalog_price_not_supplier_verified",
+      "productIds": [
+        "prd_6b5c5e43-5de6-48d8-8adb-3115aa858103",
+        "prd_7c6d9d12-44c6-458a-b3a8-f34036436d15",
+        "prd_7def5b2d-1bff-4c1c-9414-ffa7839754bc",
+        "prd_403c64ba-1538-4e05-8355-965e2a594e3a"
+      ],
+      "active": true
+    }
+  ],
+  "orders": [],
+  "payments": [],
+  "auditLog": []
+}
