@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shorts Hub - منصة إدارة الشورتس السحابية</title>
+    
+    <!-- بيانات تحسين محركات البحث SEO -->
+    <meta name="description" content="منصة Shorts Hub السحابية الذكية لسحب وإدارة فيديوهات تيك توك وإنستجرام ويوتيوب أونلاين بضغطة زر.">
+    <meta name="keywords" content="shorts downloader, تنزيل فيديوهات, شورتس هاب, سحب فيديوهات تيك توك, Shorts Hub">
+    <meta name="author" content="kemo-777">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -90,7 +96,7 @@
                             <li><i class="fa-solid fa-check text-green-400 ml-1"></i> دعم فني أولوي</li>
                         </ul>
                     </div>
-                    <button onclick="selectPlan('الباقة الاحترافية', '$9.99')" class="w-y py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
+                    <button onclick="selectPlan('الباقة الاحترافية', '$9.99')" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
                 </div>
 
                 <div class="bg-gray-900/80 border border-pink-500/30 p-5 rounded-2xl flex flex-col justify-between">
@@ -103,7 +109,7 @@
                             <li><i class="fa-solid fa-check text-green-400 ml-1"></i> مدير حساب خاص</li>
                         </ul>
                     </div>
-                    <button onclick="selectPlan('باقة الشركات', '$29.99')" class="w-y py-2.5 bg-pink-600 hover:bg-pink-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
+                    <button onclick="selectPlan('باقة الشركات', '$29.99')" class="w-full py-2.5 bg-pink-600 hover:bg-pink-500 rounded-xl font-bold text-xs text-white transition">اشترك الآن</button>
                 </div>
             </div>
 
@@ -178,7 +184,7 @@
                 ` + grid.innerHTML;
                 
                 urlInput.value = '';
-                downloadBtn.disabled, downloadBtn.disabled = false;
+                downloadBtn.disabled = false;
                 downloadBtn.innerHTML = '<i class="fa-solid fa-download"></i> جلب وتحميل فوري';
             }, 500);
         }
